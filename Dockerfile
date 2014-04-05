@@ -14,5 +14,8 @@ RUN		DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential libx11-de
 RUN		DEBIAN_FRONTEND=noninteractive apt-get -y install hardinfo crafty phoronix-test-suite
 RUN 	wget http://forums.servethehome.com/pjk/STHbench.sh && chmod +x STHbench.sh
 
+# Update path to include /usr/games for crafty test
+ENV	PATH	/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
 # Exeute test
 ENTRYPOINT	["/STHbench.sh"]
