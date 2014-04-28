@@ -28,4 +28,4 @@ RUN	wget https://raw.githubusercontent.com/STH-Dev/STHbench.sh/master/STHbench-D
 #	sudo ./STHbench-Dev012.06.sh
 
 # Exeute test
-NTRYPOINT	["/STHbench.sh-Dev012.09.sh"]
+ENTRYPOINT	["/STHbench-Dev012.09.sh"]
