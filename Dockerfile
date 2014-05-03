@@ -20,12 +20,15 @@ RUN	apt-get -y install build-essential libx11-dev libglu-dev hardinfo sysbench u
 
 # Install benchmark packages
 RUN	apt-get -y install hardinfo crafty
-RUN	wget -N http://phoronix-test-suite.com/releases/repo/pts.debian/files/phoronix-test-suite_4.8.6_all.deb &&\
-	dpkg -i phoronix-test-suite_4.8.6_all.deb &&\
-	rm phoronix-test-suite_4.8.6_all.deb
-RUN	wget https://raw.githubusercontent.com/STH-Dev/STHbench.sh/master/STHbench-Dev012.09.sh &&\
-	chmod +x STHbench-Dev012.09.sh
+
+# Disabled PTS tests
+#RUN	wget -N http://phoronix-test-suite.com/releases/repo/pts.debian/files/phoronix-test-suite_4.8.6_all.deb &&\
+#	dpkg -i phoronix-test-suite_4.8.6_all.deb &&\
+#	rm phoronix-test-suite_4.8.6_all.deb
+
+RUN	wget https://raw.githubusercontent.com/STH-Dev/STHbench.sh/master/STHbench-Dev012.11.sh &&\
+	chmod +x STHbench-Dev012.11.sh
 #	sudo ./STHbench-Dev012.06.sh
 
 # Exeute test
-ENTRYPOINT	["/STHbench-Dev012.09.sh"]
+ENTRYPOINT	["/STHbench-Dev012.11.sh"]
