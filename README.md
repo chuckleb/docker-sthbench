@@ -8,6 +8,7 @@ Make sure Docker is installed:
 http://docs.docker.io/installation/#installation  
 
 To run the benchmark, we pull the latest copy and then pass a directory to store results.  
-
+<pre><code>
 docker pull chuckleb/sthbench  
 docker run -v `pwd`:/data chuckleb/sthbench
+</code></pre>
