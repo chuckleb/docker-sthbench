@@ -1,11 +1,21 @@
-Based off of ServeTheHome STHbench 2013 instructions, image contains all updates and automatically runs the test script.
+This Docker image runs the Linux-Bench tests from Serve The Home (http://www.servethehome.com/)
 
-http://forums.servethehome.com/index.php?resources/sthbench-2013-download-and-instructions.7/
+Results are hosted at: http://linux-bench.com/
 
 To run:
 
 Make sure Docker is installed:  
 http://docs.docker.io/installation/#installation  
+
+Quick instructions: 
+CentOS (requires EPEL)
+$ sudo yum install docker-io
+
+Ubuntu
+$ sudo apt-get update
+$ sudo apt-get install docker.io
+$ sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
+
 
 To run the benchmark, we pull the latest copy and then pass a directory to store results.  
 <pre><code>

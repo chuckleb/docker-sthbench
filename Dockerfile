@@ -14,5 +14,8 @@ RUN	apt-get -y update
 RUN	apt-get -y install build-essential libx11-dev libglu-dev hardinfo sysbench unzip expect \
 	php5-curl php5-common php5-cli php5-gd libfpdi-php gfortran wget cmake libncurses5-dev
 
+# Mount point to hold results
+VOLUME ["/data"]
+
 # This will force it to pull latest script and execute
-ENTRYPOINT ["/bin/bash", "-c", "wget https://raw.githubusercontent.com/STH-Dev/STHbench.sh/master/STHbench-Dev012.11.sh;chmod a+x *.sh ;./STHbench-Dev012.11.sh"]
+ENTRYPOINT ["/bin/bash", "-c", "wget https://raw.githubusercontent.com/STH-Dev/linux-bench/master/linux-bench.sh;chmod a+x *.sh ;./linux-bench.sh"]
