@@ -7,14 +7,14 @@ To run:
 Make sure Docker is installed:  
 http://docs.docker.io/installation/#installation  
 
-Quick instructions: 
-CentOS (requires EPEL)
-$ sudo yum install docker-io
+Quick instructions:
+CentOS (requires EPEL)  
+$ sudo yum install docker-io  
 
-Ubuntu
-$ sudo apt-get update
-$ sudo apt-get install docker.io
-$ sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
+Ubuntu  
+$ sudo apt-get update  
+$ sudo apt-get install docker.io  
+$ sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker  
 
 
 To run the benchmark, we pull the latest copy and then pass a directory to store results.  
