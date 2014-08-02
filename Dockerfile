@@ -12,7 +12,7 @@ ENV	PATH	/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Run updates and install base libs & tools
 RUN	apt-get -y update
 RUN	apt-get -y install build-essential libx11-dev libglu-dev hardinfo sysbench unzip expect \
-	php5-curl php5-common php5-cli php5-gd libfpdi-php gfortran wget cmake libncurses5-dev
+	php5-curl php5-common php5-cli php5-gd libfpdi-php gfortran wget cmake libncurses5-dev curl
 
 # Mount point to hold results
 VOLUME ["/data"]
